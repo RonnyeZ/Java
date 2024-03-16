@@ -5,7 +5,9 @@ public class App {
         Scanner entrada = new Scanner(System.in);
 
         System.out.println("Informe aqui");
-        String nome = entrada.nextLine();
-        
+        String x1 = entrada.nextLine();
+        System.out.println("Esse é seu nome é " + x1);
+
+        entrada.close();
     }
 }
