@@ -13,6 +13,16 @@ public class Ex05 {
             
             Escreva um código que faça o reajuste e exiba os novos valores. */
 
+            double gerente = 8500;
+            double analista = 5000;
+            double suporte = 3000;
+
+
+
+            System.out.println(gerente);
+            System.out.println(analista);
+            System.out.println(suporte);
+
         entrada.close();
         }
 }
