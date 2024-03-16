@@ -17,8 +17,6 @@ public class Ex05 {
             double analista = 5000;
             double suporte = 3000;
 
-
-
             System.out.println(gerente);
             System.out.println(analista);
             System.out.println(suporte);
