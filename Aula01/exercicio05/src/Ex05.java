@@ -11,15 +11,16 @@ public class Ex05 {
                 Suporte - R$ 3.000,00
             Será dado um reajuste de 12% nos salários do Gerente e Analista, e 15% no salário do Suporte.
             
-            Escreva um código que faça o reajuste e exiba os novos valores. */
+            Escreva um código que faça o reajuste e exiba os novos valores. 
+            */
 
-            double gerente = 8500;
-            double analista = 5000;
-            double suporte = 3000;
+            double gerente = 8500 * 1.12;
+            double analista = 5000 * 1.12;
+            double suporte = 3000 * 1.15;
 
-            System.out.println(gerente);
-            System.out.println(analista);
-            System.out.println(suporte);
+            System.out.println("Novo salario do gerente é:" + gerente);
+            System.out.println("Novo salario do analista é:" + analista);
+            System.out.println("Novo salario do suporte é:" + suporte);
 
         entrada.close();
         }
