@@ -11,12 +11,14 @@ public class Triangulo {
 		return p; //Sempre coloque o "return"
 	}
 	
+	// Metodo para calcular a area, e chamar o valor de P
 	public double areaDoTriangulo() {
 		double p = calculoP();
 		double area = Math.sqrt(p * (p - this.a1) * (p - this.a2) * (p - this.a3));
 		return area;
 	}
 	
+	// Metodo para comparar os valores de duas areas
 	public void areaMaior (double x, double y) {
 		if (x > y) {
 			System.out.println("A área do 1° Triangulo é maior");

@@ -22,6 +22,7 @@ public class TrianguloPrincipal {
 		t2.a2 = entrada.nextDouble();
 		t2.a3 = entrada.nextDouble();
 		
+		//Valor dos Perimetros
 		double p1 = t1.calculoP();
 		System.out.println("Valor do Perimetro do 1° Triangulo: " + p1);
 		
@@ -30,6 +31,7 @@ public class TrianguloPrincipal {
 		
 		System.out.println("");
 		
+		// Valor das Areas
 		double area1 = t1.areaDoTriangulo();
 		System.out.println("Valor da Área do 1° Triangulo: " + area1);
 
@@ -38,7 +40,7 @@ public class TrianguloPrincipal {
 		
 		System.out.println("");
 
-		//Resultado
+		//Resultado Final
 		t1.areaMaior(area1,area2);
 		
 		
