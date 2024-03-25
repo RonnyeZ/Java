@@ -1,6 +1,5 @@
 public class Ex07 {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
         /* 
          Escreva um código que escreva a sequência Fibonacci até o valor informado pelo usuário.
          
