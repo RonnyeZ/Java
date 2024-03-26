@@ -24,17 +24,13 @@ public class Ex05 {
             System.out.println("Digite um numero:");
             valor = entrada.nextDouble();
 
-            // Soma dos valores
-            soma = soma + valor;
+            soma = soma + valor; // Soma dos valores
 
-            // Incremento do contador para facilitar a media
-            contador++;
+            contador++; // Incremento do contador para facilitar a media
         }
 
-        double media = soma / contador;
-
         System.out.println("A soma dos valores é: " + soma);
-        System.out.println("A media dos valores é: " + media);
+        System.out.println("A media dos valores é: " + (soma / contador));
 
         entrada.close();
     }
