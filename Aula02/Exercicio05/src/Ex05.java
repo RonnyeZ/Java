@@ -12,7 +12,7 @@ public class Ex05 {
 
         // Declaração das variáveis
         
-        double numero = 0;
+        double valor = 0;
         double soma = 0; 
         int contador = 0;
 
@@ -21,13 +21,13 @@ public class Ex05 {
 
             System.out.println(""); // Espaço
 
-            System.out.println("Digite um número: ");
-            numero = entrada.nextDouble();
+            System.out.println("Digite um numero: ");
+            valor = entrada.nextDouble();
 
             // Soma dos valores
-            soma = soma + numero;
+            soma = soma + valor;
 
-            // Incremento do contador
+            // Incremento do contador para facilitar a media
             contador++;
         }
 
