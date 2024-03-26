@@ -12,7 +12,7 @@ public class Ex06 {
         int valor = entrada.nextInt();
         int contador = 0;
 
-        System.out.println("");
+        System.out.println(""); // Espaço
         for (int i = 0; i <= 10; i++) {
             System.out.println(valor * contador);
             contador++;
