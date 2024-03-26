@@ -8,12 +8,14 @@ public class Ex06 {
          Escreva um código que receba um valor inteiro de 0 a 10. Exiba a tabuada de 0 a 10 do valor informado.
         */
 
-        int valor = 0;
+        System.out.println("Digite um numero:");
+        int valor = entrada.nextInt();
+        int contador = 0;
 
-        for (int i = 0; i < valor; i++) {
-            System.out.println(""); // Espaço
-
-            System.out.println("Digite um numero");
+        System.out.println("");
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(valor * contador);
+            contador++;
         }
 
         entrada.close();
