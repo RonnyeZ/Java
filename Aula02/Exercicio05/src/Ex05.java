@@ -21,7 +21,7 @@ public class Ex05 {
 
             System.out.println(""); // Espaço
 
-            System.out.println("Digite um numero: ");
+            System.out.println("Digite um numero:");
             valor = entrada.nextDouble();
 
             // Soma dos valores
