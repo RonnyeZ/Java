@@ -12,9 +12,9 @@ public class Ex01 {
         int x1 = entrada.nextInt();
         int x2 = entrada.nextInt();
 
-        int valor = x1 + x2;
+        int soma = x1 + x2;
 
-        if (valor % 2 == 0) {
+        if (soma % 2 == 0) {
             System.out.println("A soma dos valores resulta num número par, sendo esse resultado" + valor);
         } else {
             System.out.println("A soma dos valores resulta num número ímpar, sendo esse resultado " + valor);
