@@ -20,7 +20,7 @@ public class PessoaPrincipal {
         
         p.informaIdade();
 
-        entrada.close;
+        entrada.close();
         }
 
 }
