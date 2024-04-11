@@ -35,6 +35,7 @@ valor, (valor * COUNT(carrinho.quantidade)) AS subtotal FROM carrinho
 INNER JOIN produto ON produto = codigo_produto
 GROUP BY descricao, valor
 
+  /* Aula 09/04 */
 SELECT SUM(valor) AS Total FROM carrinho /*Faz a soma dos valores dos produtos no carrinho*/
 INNER JOIN produto ON produto = codigo_produto
 
@@ -49,6 +50,7 @@ WHERE codigo_produto IN (SELECT produto FROM carrinho)
 SELECT descricao, valor FROM produto /*Mostrar todos os itens que não estão no carrinho*/
 WHERE codigo_produto NOT IN (SELECT produto FROM carrinho)
 
+  /*Escreva uma query que reduza em 15% o valor dos produtos não vendidos*/
 UPDATE produto /*Produtos que não estejam no carrinho reduzem 15% do valor*/
 SET valor = valor - (valor * 0.15)
 WHERE codigo_produto NOT IN (SELECT produto FROM carrinho)
@@ -56,3 +58,14 @@ WHERE codigo_produto NOT IN (SELECT produto FROM carrinho)
 UPDATE produto /*Voltar ao valor inicial*/
 SET valor = valor + (valor * 0.1764705882352941176470588235294)
 WHERE codigo_produto NOT IN (SELECT produto FROM carrinho)
+
+/*Escreva uma query que aumente o valor em 10% dos produtos que o estoque seja menor que 10*/
+UPDATE produto /*Aumenta o valor em 10% dos produtos que possuirem a quantidade menor que 10*/
+SET valor = valor + (valor * 0.10)
+WHERE quantidade < 10
+
+UPDATE produto /*Volta ao valor inicial*/
+SET valor = valor - (valor * 0.090909090909090909090909090909091)
+WHERE quantidade < 10
+
+SELECT descricao, quantidade, valor FROM produto
