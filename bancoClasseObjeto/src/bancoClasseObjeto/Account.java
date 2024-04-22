@@ -47,10 +47,16 @@ public class Account {
 	public void deposito(double amount) {
 		this.saldo += amount;
 	}
+	
+	public void saque(double amount) {
+		this.saldo -= amount;
+	}
 
 	@Override
 	public String toString() {
-		return "numero: " + this.numero + ", Titular: " + this.nome + ", saldo: R$" + this.saldo;
+		return  "Conta: " + this.numero + 
+				" - Titular: " + this.nome + 
+				" - Saldo Atual: R$ " + this.saldo;
 	}
 	
 	
