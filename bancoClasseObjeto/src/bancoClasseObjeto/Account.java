@@ -50,7 +50,7 @@ public class Account {
 
 	@Override
 	public String toString() {
-		return "[numero: " + this.numero + ", Titular: " + this.nome + ", saldo: $" + this.saldo + "]";
+		return "numero: " + this.numero + ", Titular: " + this.nome + ", saldo: R$" + this.saldo;
 	}
 	
 	
