@@ -7,20 +7,32 @@ public class Principal {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		
-		Account conta = new Account();
+		Account conta;
 		
 		System.out.println("Informe o numero da conta: ");
-		conta.setNumero(entrada.nextInt());
+		int numConta = entrada.nextInt();
 		
 		System.out.println("Informe o seu nome: ");
-		conta.setNome(entrada.next());
+		entrada.nextLine();
+		String nomeTitular = entrada.nextLine();
 		
-		System.out.println("Informe um valor de deposito: ");
-		conta.setSaldo(entrada.nextDouble());
+		System.out.println("VocÃª deseja efetuar um deposito inicial? (y/n)");
+		char respostaDeposito = entrada.next().toLowerCase().charAt(0); 
+		// "toLowerCase()" serve para deminuir a letra para minuscola 
+		//"charAt()" serve para pegar a letra da posiÃ§Ã£o definida
 		
-		System.out.println("Seu Numero é: " + conta.getNumero());
-		System.out.println("Seu Nome é: " + conta.getNome());
-		System.out.println("Seu Saldo é: " + conta.getSaldo());
+		if (respostaDeposito == 'y') {
+			
+			System.out.println("Informe o valor de deposito:");
+			double valorDeposito = entrada.nextDouble();
+			conta = new Account(numConta, nomeTitular, valorDeposito);
+			
+		} else {
+			
+			conta = new Account(numConta, nomeTitular);
+			
+		}
+		
 		
 		entrada.close();
 	}
