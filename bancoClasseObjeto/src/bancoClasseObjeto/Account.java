@@ -49,7 +49,7 @@ public class Account {
 	}
 	
 	public void saque(double amount) {
-		this.saldo -= amount;
+		this.saldo -= (amount + 5.0);
 	}
 
 	@Override
