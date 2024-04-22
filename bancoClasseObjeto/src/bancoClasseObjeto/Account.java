@@ -6,6 +6,19 @@ public class Account {
 	private String nome;
 	
 	private double saldo;
+	
+
+	public Account(int numero, String nome) {
+		this.numero = numero;
+		this.nome = nome;
+	}
+
+	public Account(int numero, String nome, double valorDeposito) {
+		this.numero = numero;
+		this.nome = nome;
+		deposito(valorDeposito);
+	}
+	
 
 	public int getNumero() {
 		return numero;
@@ -34,4 +47,11 @@ public class Account {
 	public void deposito(double amount) {
 		this.saldo += amount;
 	}
+
+	@Override
+	public String toString() {
+		return "[numero: " + this.numero + ", Titular: " + this.nome + ", saldo: $" + this.saldo + "]";
+	}
+	
+	
 }
