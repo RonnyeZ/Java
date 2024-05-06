@@ -13,22 +13,43 @@ public class Principal {
 		
 		Telefonistas t = new Telefonistas();
 		
-		g.setNome("Escrever");
-		g.setSalario(3000);
-		g.setUsername("Escrever");
-		g.setPassword("Escrever");
+		//Definir dados da classe Gerente
+		g.setNome("Ronyéllison");
+		g.setSalario(1000);
+		g.setUsername("Rony");
+		g.setPassword("12345");
 		
-		t.setNome("Escrever");
-		t.setSalario(2000);
-		t.setCode(00);
+		//Definir dados da classe Telefonistas
+		t.setNome("Danielle");
+		t.setSalario(1000);
+		t.setCode(73);
 		
-		s.setNome("Escrever");
+		//Definir dados da classe Secretarias
+		s.setNome("Matheus");
 		s.setSalario(1000);
-		s.setRamalNumber(00);
+		s.setRamalNumber(37);
+		
 		
 		System.out.println("GERENTE");
+		g.mostrarDados();
+		
+			System.out.println(""); //Espaçamento
+		
+		System.out.println("TELEFONISTA");
+		t.mostrarDados();
+		
+			System.out.println(""); //Espaçamento
+		
+		System.out.println("SECRETARIO");
+		s.mostrarDados();
+		
+		
+		
+		/* ------OBSOLETO-------
+		System.out.println("GERENTE");
 		System.out.println("Nome: " + g.getNome());
-		System.out.println("Salario: " + g.getSalario());
+		System.out.println("Salario: R$" + g.getSalario());
+		System.out.println("Bonificação: R$" + g.calculoBonificacao());
 		System.out.println("Usuário: " + g.getUsername());
 		System.out.println("Senha: " + g.getPassword());
 		
@@ -36,16 +57,18 @@ public class Principal {
 		
 		System.out.println("TELEFONISTA");
 		System.out.println("Nome: " + t.getNome());
-		System.out.println("Salario: " + t.getSalario());
+		System.out.println("Salario: R$" + t.getSalario());
+		System.out.println("Bonificação: R$" + t.calculoBonificacao());
 		System.out.println("Estação de Trabalho: " + t.getCode());
 		
 		System.out.println("");
 		
 		System.out.println("SECRETARIA");
 		System.out.println("Nome: " + s.getNome());
-		System.out.println("Salario: " + s.getSalario());
+		System.out.println("Salario: R$" + s.getSalario());
+		System.out.println("Bonificação: R$" + s.calculoBonificacao());
 		System.out.println("Numero do Ramal: " + s.getRamalNumber());	
-		
+		*/
 		
 		entrada.close();
 	}
