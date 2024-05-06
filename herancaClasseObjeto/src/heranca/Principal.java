@@ -13,23 +13,23 @@ public class Principal {
 		
 		Telefonistas t = new Telefonistas();
 		
-		g.setNome("Ronyéllison");
+		g.setNome("Escrever");
 		g.setSalario(3000);
-		g.setUsername("Rony");
-		g.setPassword("12345");
+		g.setUsername("Escrever");
+		g.setPassword("Escrever");
 		
-		t.setNome("Ronyéllison");
+		t.setNome("Escrever");
 		t.setSalario(2000);
-		t.setCode(41);
+		t.setCode(00);
 		
-		s.setNome("");
+		s.setNome("Escrever");
 		s.setSalario(1000);
-		s.setRamalNumber(24);
+		s.setRamalNumber(00);
 		
 		System.out.println("GERENTE");
 		System.out.println("Nome: " + g.getNome());
 		System.out.println("Salario: " + g.getSalario());
-		System.out.println("Usuário: " + g.getUsername());
+		System.out.println("UsuÃ¡rio: " + g.getUsername());
 		System.out.println("Senha: " + g.getPassword());
 		
 		System.out.println("");
@@ -37,7 +37,7 @@ public class Principal {
 		System.out.println("TELEFONISTA");
 		System.out.println("Nome: " + t.getNome());
 		System.out.println("Salario: " + t.getSalario());
-		System.out.println("Estação de Trabalho: " + t.getCode());
+		System.out.println("EstaÃ§Ã£o de Trabalho: " + t.getCode());
 		
 		System.out.println("");
 		
