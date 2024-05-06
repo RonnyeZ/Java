@@ -10,15 +10,12 @@ public class Ex02 {
         int resultado = 0;
 
         while (contador < 10){
-
             int valor = entrada.nextInt();
 
             if (valor % 2 == 0){
-
                 resultado += valor;
 
             } else {
-
                 resultado -= valor;
 
             }
