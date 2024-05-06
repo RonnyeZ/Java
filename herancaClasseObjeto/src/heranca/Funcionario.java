@@ -17,6 +17,16 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
+	public void mostrarDados() {
+		System.out.println("Nome: " + this.nome);
+		System.out.println("Salario: R$" + this.salario);
+		System.out.println("Bonificação: R$" + this.calculoBonificacao());
+	}
+	
+	public double calculoBonificacao() {
+		return this.salario * 0.10;
+	}
+	
 
 	public int getCodigo() {
 		return codigo;
