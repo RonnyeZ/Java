@@ -4,7 +4,7 @@ public class Ex03 {
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		
- 		int sorteado = (int) ((10 * Math.random()) + 1);
+ 		int sorteado = (int) ((100 * Math.random()) + 1);
 		int valor = 0;
 		
 		System.out.println("O numero sorteado é: " + sorteado);
