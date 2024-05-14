@@ -1,35 +1,30 @@
 CREATE DATABASE faculdade;
-
-// Criando tabela Aluno
-CREATE TABLE aluno (
+  
+CREATE TABLE alunos (
 	matricula VARCHAR(10) PRIMARY KEY, 
 	nome VARCHAR(200), 
 	telefone VARCHAR(13)
 );
-
-// Criando tabela Professor
-CREATE TABLE professor (
+  
+CREATE TABLE professores (
 	matricula VARCHAR(10) PRIMARY KEY,
 	nome VARCHAR(200),
 	telefone VARCHAR(13),
 	titulacao VARCHAR(20)
 );
-
-// Criando tabela Cursos
+  
 CREATE TABLE cursos (
 	codigo_curso VARCHAR(6) PRIMARY KEY,
 	nome VARCHAR(200),
 	carga_horaria INTEGER
 );
-
-// Criando tabela Disciplinas
+  
 CREATE TABLE disciplinas (
 	codigo_disciplina VARCHAR(6) PRIMARY KEY,
 	nome VARCHAR(200),
 	carga_horaria INTEGER
 );
-
-// Inserir cursos na tabela de curso
+  
 INSERT INTO cursos (codigo_curso, nome, carga_horaria)
 VALUES
 ("CCO", "Ciências da Computação", 3200),
@@ -37,7 +32,6 @@ VALUES
 ("SI", "Sistemas para Internet", 1800),
 ("ADS", "Análise e Desenvolvimento de Sistemas", 1800);
 
-// Inserir disciplinas na tabela de disciplina
 INSERT INTO disciplinas (codigo_disciplina, nome, carga_horaria)
 VALUES
 ("DLP1", "Linguagem de Programação 1", 80),
@@ -50,8 +44,41 @@ VALUES
 ("DTF1", "Tecnologias para Front-End 1", 80),
 ("DAC0", "Arquitetura de Computadores", 80);
 
-// Rodar a tabela de Cursos
-SELECT codigo_curso, nome, carga_horaria FROM cursos
+/*SELECT codigo_curso, nome, carga_horaria FROM cursos*/
 
-// Rodar a tabela de Disciplinas
-SELECT codigo_disciplina, nome, carga_horaria FROM disciplinas
+/*SELECT codigo_disciplina, nome, carga_horaria FROM disciplinas*/
+
+/* [turma] <--- [disciplinas] */
+CREATE TABLE turma (
+	cod_turma INTEGER PRIMARY KEY,
+	turno VARCHAR(10),
+	disciplina VARCHAR(6),
+	CONSTRAINT fk_disciplina_turma FOREIGN KEY (disciplina) 
+	REFERENCES disciplinas(codigo_disciplina)	
+);
+
+/* [prof_disciplina] <---- [disciplinas] + [professores] */
+CREATE TABLE prof_disciplina(
+	disciplina VARCHAR(6),
+	professor VARCHAR(10),
+	CONSTRAINT PRIMARY KEY (disciplina, professor),
+	
+	CONSTRAINT fk_disciplina_professor FOREIGN KEY (disciplina)
+	REFERENCES disciplinas(codigo_disciplina),
+	
+	CONSTRAINT fk_professor_disciplina FOREIGN KEY (professor) 
+	REFERENCES professores(matricula)
+);
+
+/* [curso_disciplina] <---- [disciplinas] + [cursos] */
+CREATE TABLE curso_disciplina(
+	curso VARCHAR(6),
+	disciplina VARCHAR(6),
+	CONSTRAINT PRIMARY KEY (curso, disciplina),
+	
+	CONSTRAINT fk_curso_disciplina FOREIGN KEY (curso)
+	REFERENCES cursos(codigo_curso),
+	
+	CONSTRAINT fk_disciplina_curso FOREIGN KEY (disciplina)
+	REFERENCES disciplinas(codigo_disciplina)
+)
