@@ -149,3 +149,70 @@ AS DISCIPLINAS OFERTADAS */
 
 /* MATRICULE OS ALUNOS EM TURMAS (CADA ALUNO DEVERÁ SER MATRICULADO EM 
 PELO MENOS 3 TURMAS DIFERENTES NO MESMO TURNO) */
+
+SELECT disciplina, disciplinas.nome, turno, professores.nome AS professor, titulacao 
+FROM turma
+INNER JOIN disciplinas ON disciplina = codigo_disciplina
+INNER JOIN professores ON professor = matricula
+
+INSERT INTO alunos (matricula, nome, telefone)
+VALUES
+("ALUNO01", "Daniel", "1111-1111"),
+("ALUNO02", "Lucas", "2222-2222"),
+("ALUNO03", "Michele", "3333-3333"),
+("ALUNO04", "Elaine", "4444-4444"),
+("ALUNO05", "Andre", "5555-5555"),
+("ALUNO06", "Antony", "6666-6666"),
+("ALUNO07", "Tiago", "7777-7777"),
+("ALUNO08", "Gabriel", "8888-8888"),
+("ALUNO09", "Matheus", "9999-9999"),
+("ALUNO10", "Leandro", "0000-0000");
+
+INSERT INTO aluno_turma (aluno, turma)
+VALUES
+("ALUNO01", 2024100001),
+("ALUNO01", 2024100003),
+("ALUNO01", 2024100004),
+
+("ALUNO02", 2024100002),
+("ALUNO02", 2024100006),
+("ALUNO02", 2024100005),
+
+("ALUNO03", 2024100001),
+("ALUNO03", 2024100004),
+("ALUNO03", 2024100007),
+
+("ALUNO04", 2024100002),
+("ALUNO04", 2024100005),
+("ALUNO04", 2024100006),
+
+("ALUNO05", 2024100001),
+("ALUNO05", 2024100003),
+("ALUNO05", 2024100007),
+
+("ALUNO06", 2024100001),
+("ALUNO06", 2024100004),
+("ALUNO06", 2024100003),
+
+("ALUNO07", 2024100001),
+("ALUNO07", 2024100003),
+("ALUNO07", 2024100004),
+
+("ALUNO08", 2024100006),
+("ALUNO08", 2024100002),
+("ALUNO08", 2024100005),
+
+("ALUNO09", 2024100007),
+("ALUNO09", 2024100001),
+("ALUNO09", 2024100003),
+
+("ALUNO10", 2024100006),
+("ALUNO10", 2024100005),
+("ALUNO10", 2024100002);
+
+
+SELECT matricula, alunos.nome AS Aluno, turma, turno
+FROM aluno_turma
+INNER JOIN alunos ON aluno = matricula
+INNER JOIN turma ON turma = cod_turma
+
