@@ -3,21 +3,22 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConnectionFactory {
-
-	public static void main(String[] args) {
-		
-		Connection conexao = null;
+	
+	public Connection conexao() {
 		
 		try {
-			conexao = DriverManager.getConnection(
+			return DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/livraria", "root", "");
-			System.out.println("Conex„o OK");
+			
+			//System.out.println("Conex√£o OK");
 			
 		} catch (SQLException e) {
-			System.out.println("Falha na Conex„o!!");
 			
+			throw new RuntimeException(e);
+			
+			//System.out.println("Falha na Conex√£o!!");
 		}
-
+		
 	}
-
+		
 }
