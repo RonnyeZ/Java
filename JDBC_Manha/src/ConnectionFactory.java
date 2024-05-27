@@ -10,15 +10,15 @@ public class ConnectionFactory {
 			return DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/livraria", "root", "");
 			
-			//System.out.println("Conex√£o OK");
+			//System.out.println("Conex„o OK");
 			
 		} catch (SQLException e) {
 			
 			throw new RuntimeException(e);
 			
-			//System.out.println("Falha na Conex√£o!!");
+			//System.out.println("Falha na Conex„o!!");
 		}
 		
 	}
-		
+	
 }
