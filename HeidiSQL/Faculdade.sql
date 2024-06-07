@@ -150,6 +150,14 @@ AS DISCIPLINAS OFERTADAS */
 /* MATRICULE OS ALUNOS EM TURMAS (CADA ALUNO DEVERÁ SER MATRICULADO EM 
 PELO MENOS 3 TURMAS DIFERENTES NO MESMO TURNO) */
 
+
+/*SELECT DISTINCT(nome) FROM disciplinas
+INNER JOIN turma ON turma.disciplina = codigo_disciplina*/
+
+/*SELECT DISTINCT(nome), titulacao FROM professores
+INNER JOIN turma ON turma.professor = matricula*/
+
+
 SELECT disciplina, disciplinas.nome, turno, professores.nome AS professor, titulacao 
 FROM turma
 INNER JOIN disciplinas ON disciplina = codigo_disciplina
