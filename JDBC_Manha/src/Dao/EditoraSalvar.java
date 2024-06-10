@@ -10,7 +10,7 @@ import util.ConnectionFactory;
 public class EditoraSalvar {
 	
 	private Connection conexao;
-	PreparedStatement stmt; //Usa prepared quando
+	PreparedStatement stmt; //Usa-se preparedStatement quando 
 	
 	public EditoraSalvar() {
 		this.conexao = ConnectionFactory.createConnection();
